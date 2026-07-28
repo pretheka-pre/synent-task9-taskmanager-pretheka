@@ -14,6 +14,20 @@ TaskFlow is a web-based task management application built with Flask. It allows 
 - User-specific Dashboard
 - Responsive UI using Bootstrap
 
+## Screenshots
+
+### Home Page
+
+![Home](screenshots/home.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Add Task
+
+![Add Task](screenshots/add-task.png)
+
 ## Technologies Used
 
 - Python
