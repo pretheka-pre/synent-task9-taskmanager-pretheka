@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="text-center py-5">
+
+    <h1 class="display-4 fw-bold">TaskFlow</h1>
+
+    <p class="lead mt-3">
+        Stay organized by creating, managing, and tracking your daily tasks in one place.
+    </p>
+
+    <div class="mt-4">
+
+        <a href="/register" class="btn btn-primary btn-lg me-3">
+            Get Started
+        </a>
+
+        <a href="/login" class="btn btn-outline-dark btn-lg">
+            Login
+        </a>
+
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<div class="row text-center">
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm p-4">
+
+            <h4>Create Tasks</h4>
+
+            <p>
+                Add new tasks with a title and description.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm p-4">
+
+            <h4>Manage Tasks</h4>
+
+            <p>
+                Edit, update, or delete tasks whenever required.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm p-4">
+
+            <h4>Track Progress</h4>
+
+            <p>
+                Mark tasks as completed and monitor your progress.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

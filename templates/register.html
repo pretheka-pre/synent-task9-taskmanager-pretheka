@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-md-6">
+
+        <div class="card">
+
+            <div class="card-body p-5">
+
+                <h2 class="text-center mb-2">Create Account</h2>
+
+                <p class="text-center text-muted mb-4">
+                    Join TaskFlow and start managing your tasks.
+                </p>
+
+                <form method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+
+                        <input
+                            type="text"
+                            name="username"
+                            class="form-control"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Password</label>
+
+                        <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            required>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary w-100">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+                <div class="text-center mt-4">
+
+                    <small class="text-muted">
+
+                        Already have an account?
+
+                        <a href="/login">
+                            Login
+                        </a>
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
