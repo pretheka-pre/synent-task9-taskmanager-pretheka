@@ -89,7 +89,9 @@ def dashboard():
     if "user" not in session:
         return redirect("/login")
 
-    tasks = Task.query.all()
+    current_user = User.query.filter_by(username=session["user"]).first()
+
+    tasks = Task.query.filter_by(user_id=current_user.id).all()
 
     total_tasks = len(tasks)
     completed_tasks = Task.query.filter_by(status="Completed").count()
@@ -117,15 +119,17 @@ def add_task():
         title = request.form["title"]
         description = request.form["description"]
 
+        current_user = User.query.filter_by(username=session["user"]).first()
+
         task = Task(
             title=title,
-            description=description
+            description=description,
+            user_id=current_user.id
         )
 
         db.session.add(task)
         db.session.commit()
 
-        flash("Task added successfully.", "success")
         return redirect("/dashboard")
 
     return render_template("add_task.html")
